@@ -11,7 +11,7 @@
 #define DEFAULT 0
 #define NUMS    1
 #define NAV     2
-#define TRI     3
+#define MEDIA   3
 
 / {
         keymap {
@@ -59,23 +59,22 @@
                         >;
                 };
 
-                conditional_layers {
-                    compatible = "zmk,conditional-layers";
-                    tri_layer {
-                        if-layers = <1 2>;
-                        then-layer = <3>;
+                
+                compatible = "zmk,conditional-layers";
+                tri_layer {
+                    if-layers = <1 2>;
+                    then-layer = <3>;
 // -----------------------------------------------------------------------------------------
 // |    |  F1 |  F2 |  F3 |  F4 |   F5  |   |    F6    |  F7  |  F8  |  F9  | F10 | VOL_UP |
 // |    | BT1 | BT2 | BT3 | BT4 |  BT5  |   |   Tog0   | TOG1 | TOG2 | TOG3 | F11 | VOL_DN |
 // |    |     |     |     |     | BTCLR |   | PRNTSCRN |      |      |      | F12 |  MUTE  |
 //                  | GUI |     |  ENT  |   |    SPC   |      | ALT  |
                         bindings = <
-   &none &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6       &kp F7    &kp F8   &kp F9   &kp F10 &kp C_VOL_UP
-   &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &tog DEFAULT &tog NUMS &tog NAV &tog TRI &kp F11 &kp C_VOL_DN
-   &none &none        &none        &none        &none        &bt BT_CLR   &kp PSCRN    &noen     &none    &none    &kp F12 &kp C_MUTE
-                                   &kp LGUI     &trans       &kp RET      &kp SPACE    &trans    &kp RALT
+    &none &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6       &kp F7    &kp F8   &kp F9     &kp F10 &kp C_VOL_UP
+    &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &tog DEFAULT &tog NUMS &tog NAV &tog MEDIA &kp F11 &kp C_VOL_DN
+    &none &none        &none        &none        &none        &bt BT_CLR   &kp PSCRN    &none     &none    &none      &kp F12 &kp C_MUTE
+                                    &kp LGUI     &trans       &kp RET      &kp SPACE    &trans    &kp RALT
                         >;
-                    };
                 };
     
         };
