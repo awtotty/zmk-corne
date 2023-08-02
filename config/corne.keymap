@@ -9,8 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define NUMS    1
-#define NAV     2
+#define NAV     1
+#define NUMS    2
 #define MEDIA   3
 
 / {
@@ -32,24 +32,10 @@
 // | SHFT |  Z  |  X  |  C  |  V   |  B  |   |  N  |  M  |  ,  |  .  |  /  | SHFT |
 //                    | GUI | NUMS | SPC |   | ENT | NAV | ALT |
                         bindings = <
-   &kp ESC   &kp Q &kp W &kp E    &kp R    &kp T   &kp Y     &kp U   &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D    &kp F    &kp G   &kp H     &kp J   &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C    &kp V    &kp B   &kp N     &kp M   &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                         &kp LGUI &mo NUMS &kp RET &kp SPACE &mo NAV &kp RALT
-                        >;
-                };
-
-                nums_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL  |
-// | CTRL |  `  |     |     |     |     |   |     |  -  |  =  |  [  |  ]  |  \   |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     | SHFT |
-//                    | GUI |     | ENT |   | SPC | NAV | ALT |
-                        bindings = <
-   &kp TAB   &kp N1    &kp N2 &kp N3   &kp N4 &kp N5  &kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &kp DEL
-   &kp LCTRL &kp GRAVE &none  &none    &none  &none   &none     &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH
-   &kp LSHFT &none     &none  &none    &none  &none   &none     &none     &none     &none    &none    &kp RSHFT
-                              &kp LGUI &trans &kp RET &kp SPACE &trans    &kp RALT
+   &kp ESC   &kp Q &kp W &kp E    &kp R   &kp T   &kp Y     &kp U    &kp I     &kp O   &kp P    &kp BSPC
+   &kp LCTRL &kp A &kp S &kp D    &kp F   &kp G   &kp H     &kp J    &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C    &kp V   &kp B   &kp N     &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+                         &kp LGUI &mo NAV &kp RET &kp SPACE &mo NUMS &kp RALT
                         >;
                 };
 
@@ -64,6 +50,20 @@
    &kp LCTRL &none   &kp LEFT &kp DOWN &kp RIGHT &kp F     &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none &none
    &kp LSHFT &none   &none    &kp C    &none     &kp G     &none    &none     &none     &none     &none &none
                               &kp LGUI &trans    &kp SPACE &kp RET   &trans    &kp RALT
+                        >;
+                };
+
+                nums_layer {
+// -----------------------------------------------------------------------------------------
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL  |
+// | CTRL |  `  |     |     |     |     |   |     |  -  |  =  |  [  |  ]  |  \   |
+// | SHFT |     |     |     |     |     |   |     |     |     |     |     | SHFT |
+//                    | GUI |     | ENT |   | SPC | NAV | ALT |
+                        bindings = <
+   &kp TAB   &kp N1    &kp N2 &kp N3   &kp N4 &kp N5  &kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &kp DEL
+   &kp LCTRL &kp GRAVE &none  &none    &none  &none   &none     &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH
+   &kp LSHFT &none     &none  &none    &none  &none   &none     &none     &none     &none    &none    &kp RSHFT
+                              &kp LGUI &trans &kp RET &kp SPACE &trans    &kp RALT
                         >;
                 };
 
