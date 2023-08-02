@@ -55,22 +55,22 @@
 
                 nav_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |     |      |  UP |   E  |  R  |   | HOME | PGDN | PGUP |  END |    |    |
-// |  TAB |     | LEFT | DWN | RGHT |  F  |   | LEFT |  DWN |  UP  | RGHT |    |    |
+// |  ESC | TAB |      |  UP |   E  |  R  |   | HOME | PGDN | PGUP |  END |    |    |
+// | CTRL |     | LEFT | DWN | RGHT |  F  |   | LEFT |  DWN |  UP  | RGHT |    |    |
 // | SHFT |     |      |  C  |      |  G  |   |      |      |      |      |    |    |
 //                     | GUI |      | SPC |   | ENT  |      | ALT  |
                         bindings = <
-   &kp ESC   &none &none    &kp UP   &kp E     &kp R     &kp HOME &kp PG_DN &kp PG_UP &kp END   &none &none
-   &kp TAB   &none &kp LEFT &kp DOWN &kp RIGHT &kp F     &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none &none
-   &kp LSHFT &none &none    &kp C    &none     &kp G     &none    &none     &none     &none     &none &none
-                            &kp LGUI &trans    &kp SPACE &kp RET   &trans    &kp RALT
+   &kp ESC   &kp TAB &none    &kp UP   &kp E     &kp R     &kp HOME &kp PG_DN &kp PG_UP &kp END   &none &none
+   &kp LCTRL &none   &kp LEFT &kp DOWN &kp RIGHT &kp F     &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none &none
+   &kp LSHFT &none   &none    &kp C    &none     &kp G     &none    &none     &none     &none     &none &none
+                              &kp LGUI &trans    &kp SPACE &kp RET   &trans    &kp RALT
                         >;
                 };
 
                 media_layer {
 // -----------------------------------------------------------------------------------------
 // |    |  F1 |  F2 |  F3 |  F4 |   F5  |   |    F6    |  F7  |  F8  |  F9  | F10 | VOL_UP |
-// |    | BT1 | BT2 | BT3 | BT4 |  BT5  |   |   Tog0   | TOG1 | TOG2 | TOG3 | F11 | VOL_DN |
+// |    | BT1 | BT2 | BT3 | BT4 |  BT5  |   |   TOG0   | TOG1 | TOG2 | TOG3 | F11 | VOL_DN |
 // |    |     |     |     |     | BTCLR |   | PRNTSCRN |      |      |      | F12 |  MUTE  |
 //                  | GUI |     |  ENT  |   |    SPC   |      | ALT  |
                         bindings = <
